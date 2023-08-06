@@ -4,9 +4,15 @@ A survey and paper-list of Knowledge-Augmented Language Models
 ## Paper-List
 ### Explicitly inject knowledge representation into language model pre-training
 - **K-BERT: Enabling Language Representation with Knowledge Graph** [[pdf]](https://arxiv.org/pdf/1909.07606.pdf)
-  - Injecting triplets from KGs by adding them to relevant entities, which leads to inputs of tree-structure;
+  - Inject triplets from KGs by adding them to relevant entities, which leads to inputs of tree-structure;
   - To obtain the tree-structure in Transformer, they propose to modify the position embedding and the attention mask matrix, keeping the injected knowledge invisible to irrelevant tokens;
-  - Pretrain task: MLM (Masked Language Modeling).
+  - Challenges addressed: (1) heterogeneous embedding space and (2) knowledge noise;
+  - Pretrain tasks: MLM (Masked Language Modeling) and NSP (Next Sentence Prediction).
+- **Knowledge Enhanced Contextual Word Representations** [[pdf]](https://arxiv.org/pdf/1909.04164.pdf)
+  - Introduce a Knowledge Attention and Recontextualization (KAR) component to integrate KB knowledge into PLMs (e.g., BERT);
+  - The KAR layer can be inserted between two Transformer layers and it calculates attention scores over entity-span representations, which will be used to recontextualize output embeddings of a Transformer block;
+  - Entity-span representations = contextualized mention-span representations + weighted entity embeddings (from a KB)
+  - Pretrain tasks: MLM, NSP, and EL (Entity Linking)
 - **ERNIE: Enhanced Language Representation with Informative Entities** [[pdf]](https://arxiv.org/pdf/1905.07129v3/n)
 - **KG-BART: Knowledge Graph-Augmented BART for Generative Commonsense Reasoning** [[pdf]](https://arxiv.org/pdf/2009.12677.pdf)
 - **DKPLM: Decomposable Knowledge-Enhanced Pre-trained Language Model for Natural Language Understanding**, in AAAI 2022. [[pdf]](https://arxiv.org/pdf/2112.01047.pdf)
