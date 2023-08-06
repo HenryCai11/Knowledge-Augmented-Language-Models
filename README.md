@@ -28,6 +28,8 @@ A survey and paper-list of Knowledge-Augmented Language Models
   - De: (1) Knowledge-aware long-tail entity detection (2) calculate (long-tail) head/tail entity embeddings (3) calculate the loss against a sampled entity list with sampled softmax function.
 - **Language Generation with Multi-Hop Reasoning on Commonsense Knowledge Graph**, in EMNLP 2020. [[pdf]](https://arxiv.org/pdf/2009.11692.pdf)
 - **KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation**, in TACL 2020. [[pdf]](https://arxiv.org/pdf/1911.06136.pdf)
+  - Pretrain task: MLM and KE (Knowledge Embedding);
+  - KE: (1) maintain a set of relation embeddings, (2) use a shared encoder to encode texts of h, r, and t (w/ or w/o descriptions) to get the corresponding embeddings, and then (3) calculate the KE loss with negative sampling.
 - **Relation-Guided Pre-Training for Open-Domain Question Answering** [[pdf]](https://arxiv.org/pdf/2109.10346.pdf)
 
 ### Implicitly model knowledge information into language model by performing knowledge-related tasks
