@@ -14,6 +14,10 @@ A survey and paper-list of Knowledge-Augmented Language Models
   - Entity-span representations = contextualized mention-span representations + weighted entity embeddings (from a KB)
   - Pretrain tasks: MLM, NSP, and EL (Entity Linking)
 - **ERNIE: Enhanced Language Representation with Informative Entities** [[pdf]](https://arxiv.org/pdf/1905.07129v3/n)
+  - M Knowledgeable Encoders (K-Encoder) are appended after N Transformer Encoders;
+  - In a K-Encoder, retrieved entity embeddings are first contextualized, then aggregated with their aligned token embeddings, and then all the embeddings (tokens & entities) are updated;
+  - Pretrain tasks: MLM, NSP, and dEA (denoising Entity Autoencoder)
+  - dEA: (1) In [5% of the time](https://github.com/thunlp/ERNIE/blob/eee03e37c0c81e3d4b3bbe6dd4774da58f571453/code/run_pretrain.py#L225C35-L225C35), for a given token-entity alignment, replace the entity with another random entity, (2) in 15% of the time, mask token-entity alignments, and (3) in the rest of the time, keep token-entity alignments unchanged.
 - **KG-BART: Knowledge Graph-Augmented BART for Generative Commonsense Reasoning** [[pdf]](https://arxiv.org/pdf/2009.12677.pdf)
 - **DKPLM: Decomposable Knowledge-Enhanced Pre-trained Language Model for Natural Language Understanding**, in AAAI 2022. [[pdf]](https://arxiv.org/pdf/2112.01047.pdf)
 - **Language Generation with Multi-Hop Reasoning on Commonsense Knowledge Graph**, in EMNLP 2020. [[pdf]](https://arxiv.org/pdf/2009.11692.pdf)
