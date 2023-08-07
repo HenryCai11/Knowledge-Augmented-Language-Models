@@ -24,6 +24,8 @@ A survey and paper-list of Knowledge-Augmented Language Models
   - Use subgraphs of different granularity in KG-augmented decoders (w/ one-hop neighborring nodes) compared with encoders;
   - Pretrain task: generate the original concept token from the masked concept nodes
 - **K-ADAPTER: Infusing Knowledge into Pre-Trained Models with Adapters** [[pdf]](https://arxiv.org/pdf/2002.01808.pdf)
+  - Parameters of the model are fixed, and two adapters are inserted into the LM, which will be separately pre-trained on the tasks;
+  - Pretrain task: predication prediction (classify relation labels of given entity pairs based on context), and dependency relation prediction (predict the head index of each token in the given sentence).
 - **DKPLM: Decomposable Knowledge-Enhanced Pre-trained Language Model for Natural Language Understanding**, in AAAI 2022. [[pdf]](https://arxiv.org/pdf/2112.01047.pdf)
   - Pretrain task: MLM and De (relational knowledge decoding);
   - De: (1) Knowledge-aware long-tail entity detection (2) calculate (long-tail) head/tail entity embeddings (3) calculate the loss against a sampled entity list with Sampled Softmax Function.
