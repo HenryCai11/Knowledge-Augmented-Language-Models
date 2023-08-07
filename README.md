@@ -23,10 +23,14 @@ A survey and paper-list of Knowledge-Augmented Language Models
   - Inject knowledge from KGs by using Multi-head Graph Attention over the input subgraphs for both KG-augmented encoders and decoders;
   - Use subgraphs of different granularity in KG-augmented decoders (w/ one-hop neighborring nodes) compared with encoders;
   - Pretrain task: generate the original concept token from the masked concept nodes
+- **K-ADAPTER: Infusing Knowledge into Pre-Trained Models with Adapters** [[pdf]](https://arxiv.org/pdf/2002.01808.pdf)
 - **DKPLM: Decomposable Knowledge-Enhanced Pre-trained Language Model for Natural Language Understanding**, in AAAI 2022. [[pdf]](https://arxiv.org/pdf/2112.01047.pdf)
   - Pretrain task: MLM and De (relational knowledge decoding);
-  - De: (1) Knowledge-aware long-tail entity detection (2) calculate (long-tail) head/tail entity embeddings (3) calculate the loss against a sampled entity list with sampled softmax function.
+  - De: (1) Knowledge-aware long-tail entity detection (2) calculate (long-tail) head/tail entity embeddings (3) calculate the loss against a sampled entity list with Sampled Softmax Function.
 - **Language Generation with Multi-Hop Reasoning on Commonsense Knowledge Graph**, in EMNLP 2020. [[pdf]](https://arxiv.org/pdf/2009.11692.pdf)
+  - Reason on a KG, model the distribution of nodes in the KG, and learn to directly copy concepts (node) from the KG during generation;
+  - The distribution of nodes is obtained by calculating scores of each node (node score). The score of node consists of two parts: (1) node scores from previous hops, and (2) triple relevance that reflects the relevancy of the evidence given by the triplet (u, r, v) under the current context (LM output embeddings);
+  - Pretrain task: (1) language modeling, (2) a gate which controls copying concepts from the KG, and (3) [weak supervision of matching triplets](https://github.com/cdjhz/multigen/blob/728ef720ac44986beadee8d845debe5d37a3d966/scripts/modeling_gpt2.py#L946) along "gold reasoning paths" gathered by breadth-first search.
 - **KEPLER: A Unified Model for Knowledge Embedding and Pre-trained Language Representation**, in TACL 2020. [[pdf]](https://arxiv.org/pdf/1911.06136.pdf)
   - Pretrain task: MLM and KE (Knowledge Embedding);
   - KE: (1) maintain a set of relation embeddings, (2) use a shared encoder to encode texts of h, r, and t (w/ or w/o descriptions) to get the corresponding embeddings, and then (3) calculate the KE loss with negative sampling.
