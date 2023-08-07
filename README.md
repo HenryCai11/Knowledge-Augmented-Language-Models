@@ -41,12 +41,11 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
   - Generate relational QA pair for relation-guided QA pretraining (based on the DPR framework);
   - Pretrain tasks (same as [DPR](https://github.com/facebookresearch/DPR/blob/a31212dc0a54dfa85d8bfa01e1669f149ac832b7/dpr/models/reader.py#L111)): (1) Retriever (dense retrieval); (2) Reader (rerank & span extraction)
 - **Facts as Experts: Adaptable and Interpretable Neural Memory over Symbolic Knowledge** [[pdf]](https://arxiv.org/pdf/2007.00849.pdf)
+- **Entities as Experts: Sparse Memory Access with Entity Supervision** [[pdf]](https://arxiv.org/pdf/2004.07202v1.pdf)
   - Insert an Entity Memory Layer between two sets of Transformer blocks, which retrieves entity embeddings that are related to mentions in the input sentence;
   - Weighted sum of the entity embeddings will be added to the previous Transformer output embeddings;
   - Entity embeddings will also be updated using the mentions (pseudo entity embeddings);
   - Pretrain tasks: MLM, mention boundary detection, entity linking.
-- **Entities as Experts: Sparse Memory Access with Entity Supervision** [[pdf]](https://arxiv.org/pdf/2004.07202v1.pdf)
-
 
 ### Implicitly model knowledge information into language model by performing knowledge-related tasks
 - **JAKET: Joint Pre-training of Knowledge Graph and Language Understanding** [[pdf]](https://arxiv.org/pdf/2010.00796.pdf)
