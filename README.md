@@ -62,6 +62,9 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
   - Model design: a Encoder-Decoder model, where input is the concatenation of a linearized graph and a sequence of texts, output is a sequence of texts;
   - [Pretrain tasks](https://github.com/thu-coai/JointGT/blob/961ac22e95c8f6210ce313ab227800b7e7d2d950/modeling_bart.py#L1503): graph enhanced text reconstruction, text enhanced graph reconstruction, graph-text embedding alignment.
 - **CoLAKE: Contextualized Language and Knowledge Embedding** [[pdf]](https://arxiv.org/pdf/2010.00309.pdf)
+  - Construct word-knowledge graphs by adding relations and entities to the anchor nodes;
+  - Graphs are linearized and input into the LM, and the structural information is maintained by modifying self-attention masks;
+  - Pretrain tasks: masking word nodes (MLM), masking entity nodes, masking relation nodes.
 
 
 ### Knowledge Injection for Specific Tasks
