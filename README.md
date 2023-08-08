@@ -75,5 +75,9 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
 
 
 **Tightly-coupled**
-- **GREASELM: Graph Reasoning Enhanced Language Models for Question Answering**
+- **GREASELM: Graph Reasoning Enhanced Language Models for Question Answering** (Multi-choice question answering)
+  - Incorporate M GreaseLM Layers after N LM-layers (encoders);
+  - A GreaseLM Layer constitutes of an LM layer and a GNN layer;
+  - In each layer, a specific token called *interaction node* is used to interact with another modal;
+  - Final embeddings of the interaction nodes from both modals and the pooled GNN embedding will be used for downstream tasks.
 - 
