@@ -54,6 +54,9 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
   - Memory design: entity embeddings are initialized using LM1, and the whole memory will be updated with an increasing interval;
   - Pretrain tasks: entity category prediction and relation type prediction (Knowledge Module); MLM, and masked entity prediction (Language Module).
 - **JointGT: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs** [[pdf]](https://arxiv.org/pdf/2106.10502.pdf)
+  - KR: linearized KG;
+  - Model design: a Encoder-Decoder model, where input is the concatenation of a linearized graph and a sequence of texts, output is a sequence of texts;
+  - [Pretrain tasks](https://github.com/thu-coai/JointGT/blob/961ac22e95c8f6210ce313ab227800b7e7d2d950/modeling_bart.py#L1503): graph enhanced text reconstruction, text enhanced graph reconstruction, graph-text embedding alignment. 
 
 
 ### Knowledge Injection for Specific Tasks
