@@ -49,6 +49,10 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
 
 ### Implicitly model knowledge information into language model by performing knowledge-related tasks
 - **JAKET: Joint Pre-training of Knowledge Graph and Language Understanding** [[pdf]](https://arxiv.org/pdf/2010.00796.pdf)
+  - Model design: there are two modules, i.e., a Knowledge Module (KM) containing a GAT and a Language Module (LM) containing a language model, which will mutually benefits each other;
+  - They propose a decomposed LM (LM1 + LM2) to solve cyclic dependency between KM and LM;
+  - Memory design: entity embeddings are initialized using LM1, and the whole memory will be updated with an increasing interval;
+  - Pretrain tasks: entity category prediction and relation type prediction (Knowledge Module); MLM, and masked entity prediction (Language Module).
 - **JointGT: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs** [[pdf]](https://arxiv.org/pdf/2106.10502.pdf)
 
 
