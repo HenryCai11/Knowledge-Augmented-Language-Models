@@ -41,6 +41,10 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
   - Generate relational QA pair for relation-guided QA pretraining (based on the DPR framework);
   - Pretrain tasks (same as [DPR](https://github.com/facebookresearch/DPR/blob/a31212dc0a54dfa85d8bfa01e1669f149ac832b7/dpr/models/reader.py#L111)): (1) Retriever (dense retrieval); (2) Reader (rerank & span extraction)
 - **Facts as Experts: Adaptable and Interpretable Neural Memory over Symbolic Knowledge** [[pdf]](https://arxiv.org/pdf/2007.00849.pdf)
+  - Add a KB of facts on the basis of EaE, where for a single 〈s, r, t〉, the concat of s and r serves as the key while t is the value;
+  - Tail entitys t_i in the Fact Memory share the same weights with embeddings in the Entity Memory;
+  - In addition to EaE, FaE also learns to retrieve facts given the context, and learns to answer the masked position (only one masked mention is picked) considering both contextual information and fact knowledge;
+  - Pretrain tasks: entity linking (at the memory layer), entity linking (at the last Transformer block), fact retrieval, masked mention modeling.
 - **Entities as Experts: Sparse Memory Access with Entity Supervision** [[pdf]](https://arxiv.org/pdf/2004.07202v1.pdf)
   - Insert an Entity Memory Layer between two sets of Transformer blocks, which retrieves entity embeddings that are related to mentions in the input sentence;
   - Weighted sum of the entity embeddings will be added to the previous Transformer output embeddings;
@@ -56,7 +60,8 @@ A simple survey and paper-list of Knowledge-Augmented Language Models
 - **JointGT: Graph-Text Joint Representation Learning for Text Generation from Knowledge Graphs** [[pdf]](https://arxiv.org/pdf/2106.10502.pdf)
   - KR: linearized KG;
   - Model design: a Encoder-Decoder model, where input is the concatenation of a linearized graph and a sequence of texts, output is a sequence of texts;
-  - [Pretrain tasks](https://github.com/thu-coai/JointGT/blob/961ac22e95c8f6210ce313ab227800b7e7d2d950/modeling_bart.py#L1503): graph enhanced text reconstruction, text enhanced graph reconstruction, graph-text embedding alignment. 
+  - [Pretrain tasks](https://github.com/thu-coai/JointGT/blob/961ac22e95c8f6210ce313ab227800b7e7d2d950/modeling_bart.py#L1503): graph enhanced text reconstruction, text enhanced graph reconstruction, graph-text embedding alignment.
+- **CoLAKE: Contextualized Language and Knowledge Embedding** [[pdf]](https://arxiv.org/pdf/2010.00309.pdf)
 
 
 ### Knowledge Injection for Specific Tasks
