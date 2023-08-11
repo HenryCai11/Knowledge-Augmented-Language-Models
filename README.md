@@ -1,5 +1,5 @@
 # Knowledge-Augmented-Language-Models
-Must read papers of Knowledge-Augmented Language Models and relevant papers.
+Must-read papers of Knowledge-Augmented Language Models and papers relevant to knowledge injection.
 
 ## Knowledge-Augmented Language Models
 <!-- ### Explicitly inject knowledge representation into language model pre-training -->
