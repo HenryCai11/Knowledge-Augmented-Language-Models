@@ -73,7 +73,7 @@ Must-read papers of Knowledge-Augmented Language Models and papers relevant to k
 
 ## Knowledge-Augmented Vision-Language Models
 
-### Knowledge Injection for Specific Tasks
+## Knowledge Injection for Specific Tasks
 - **KagNet: Knowledge-Aware Graph Networks for Commonsense Reasoning**
 - **Scalable Multi-Hop Relational Reasoning for Knowledge-Aware Question Answering**
 - **QA-GNN: Reasoning with Language Models and Knowledge Graphs for Question Answering**
